@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D卡片</title>
+    <style>
+        body {
+            position: relative;
+        }
+        /* 舞台 */
+        
+        .stage {
+            width: 250px;
+            height: 350px;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            margin-left: -125px;
+            perspective: 800px;
+            -webkit-perspective: 800px;
+        }
+        /* 容器 */
+        
+        .container {
+            width: 250px;
+            height: 350px;
+            position: absolute;
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+            transition: transform 1s ease-in;
+            -webkit-transition: transform 1s ease-out;
+        }
+        /* 图片 */
+        
+        .front {
+            position: absolute;
+            width: 250px;
+            height: 350px;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        
+        .back {
+            position: absolute;
+            width: 250px;
+            height: 350px;
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        /* 鼠标经过时旋转 */
+        
+        .stage:hover .container {
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stage">
+        <div class="container">
+            <img class="front" src="img/front-img.jpg" alt="">
+            <img class="back" src="img/back-img.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
