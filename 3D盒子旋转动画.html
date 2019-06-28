@@ -20,7 +20,9 @@
             width: 300px;
             height: 300px;
             position: relative;
+            -webkit-perspective: 600px;
             perspective: 600px;
+            -webkit-transform-origin: 50% 200px;
             transform-origin: 50% 200px;
         }
         
@@ -31,8 +33,8 @@
             margin-left: -100px;
             width: 200px;
             height: 200px;
-            transform-style: preserve-3d;
             -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
         }
         
         .container>div {
@@ -48,41 +50,53 @@
             color: red;
             border: 2px solid #999;
         }
+        /* 设置子元素的3D旋转达到立方体的视觉效果 */
         
         .item1 {
+            -webkit-transform: rotateY(0deg) translateZ(100px);
             transform: rotateY(0deg) translateZ(100px);
         }
         
         .item2 {
+            -webkit-transform: rotateY(90deg) translateZ(100px);
             transform: rotateY(90deg) translateZ(100px);
         }
         
         .item3 {
+            -webkit-transform: rotateY(180deg) translateZ(100px);
             transform: rotateY(180deg) translateZ(100px);
         }
         
         .item4 {
+            -webkit-transform: rotateY(270deg) translateZ(100px);
             transform: rotateY(270deg) translateZ(100px);
         }
         
         .item5 {
+            -webkit-transform: rotateX(90deg) translateZ(100px);
             transform: rotateX(90deg) translateZ(100px);
         }
         
         .item6 {
+            -webkit-transform: rotateX(270deg) translateZ(100px);
             transform: rotateX(270deg) translateZ(100px);
         }
+        /* 命名一个动画效果 */
         
         @keyframes rotatey {
             from {
-                transform: rotate3d(0.5, 1, 0.5, 360deg);
+                -webkit-transform: rotateY(360deg) rotateZ(360deg);
+                transform: rotateY(360deg) rotateZ(360deg);
             }
             to {
-                transform: rotate3d(0, 0, 0, 0deg);
+                -webkit-transform: rotateY(0deg) rotateZ(0deg);
+                transform: rotateY(0deg) rotateZ(0deg);
             }
         }
+        /* 添加鼠标经过动画 */
         
         .container:hover {
+            -webkit-animation: rotatey 5s linear 0s infinite;
             animation: rotatey 5s linear 0s infinite;
         }
     </style>
