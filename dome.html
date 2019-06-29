@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            border: 0;
+        }
+        body{
+            width: 500px;
+        }
+        p{
+            margin: 0 auto;
+            padding-top: 50px; 
+            text-align: center;
+
+        }
+        div{
+            display: block;
+            height: 4px;
+            width: 0;
+            border-radius: 2px;
+            background-color: rgb(47, 78, 182) ;
+            margin-top:20px;
+            transition: width 500ms ease-in;
+            -webkit-transition: width 500ms;	/* Safari 和 Chrome */
+               -moz-transition: width 500ms;	/* Firefox 4 */
+                 -o-transition: width 500ms;   /* Opera */
+
+        }
+        button{
+            display: block;
+            margin-top: 30px;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #aaa;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>小练习</p>
+    <div></div>
+    <button>切换样式</button>
+    <script>
+         var btn = document.querySelector("button");
+         var div = document.querySelector("div");
+         
+         console.log(div.style.width);
+         btn.addEventListener("click",function(){
+             if(div.style.width == ""){
+                div.style.width = "100px";
+             }else{
+                div.style.width = "";
+             }
+         })
+    </script>
+</body>
+</html>
