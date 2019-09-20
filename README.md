@@ -1,7 +1,8 @@
-# IFE-css3
+# IFE-css3 transform
+
 学习小练习
 css3中的变形 transform
-一、变形-旋转 ratate()函数
+### 一、变形-旋转 ratate()函数
 
 通过指定的角度参数使元素相对原点进行旋转。它主要在二维空间内进行操作，设置一个角度值，用来指定旋转的幅度。如果这个值为正值，元素相对原点中心顺时针旋转；如果这
 
@@ -11,7 +12,7 @@ transform:rotate(-20deg)
 
  
 
-二、变形- 扭曲 skew()函数
+### 二、变形- 扭曲 skew()函数
 
 扭曲skew()函数能够让元素倾斜显示。它可以将一个对象以其中心位置围绕着X轴和Y轴按照一定的角度倾斜。这与rotate()函数的旋转不同，rotate()函数只是旋转，而不会改变
 
@@ -33,7 +34,7 @@ transform:rotate(-20deg)
 
  
 
-三、变形-缩放 scale() 函数
+### 三、变形-缩放 scale() 函数
 
 让元素根据中心原点对对象进行缩放。 scale()的取值默认的值为1，当值设置为0.01到0.99之间时，作用使一个元素缩小；而任何大于或等于1.01的值，作用是让元素放大。
 
@@ -49,7 +50,7 @@ transform:scale(x)  X轴缩放
 
  
 
-四、变形-位移 translate() 函数
+### 四、变形-位移 translate() 函数
 
 translate()函数可以将元素向指定的方向移动，类似于position中的relative。或以简单的理解为，使用translate()函数，可以把元素从原来的位置移动，而不影响在X、Y轴上
 
@@ -66,7 +67,7 @@ transform:translate(x)  使元素水平方向移动
 transform:translate(y)  使元素垂直方向移动
 
 
-五、变形-原点 transform-origin
+### 五、变形-原点 transform-origin
 
  任何一个元素都有一个中心点，默认情况之下，其中心点是居于元素X轴和Y轴的50%处。如下图所示：
 
