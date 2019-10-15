@@ -1,6 +1,5 @@
 # IFE-css3 transform
 
-学习小练习
 css3中的变形 transform
 ### 一、变形-旋转 ratate()函数
 
